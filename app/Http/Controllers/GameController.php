@@ -6,6 +6,7 @@ use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
 use App\Http\Resources\GameResource;
 use App\Models\Game;
+use Cloudinary\Cloudinary;
 use Illuminate\Http\Request;
 
 class GameController extends Controller

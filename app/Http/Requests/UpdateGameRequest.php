@@ -12,7 +12,7 @@ class UpdateGameRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,12 +23,12 @@ class UpdateGameRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'developer' => ['required', 'string', 'max:255'],
-            'publisher' => ['required', 'string', 'max:255'],
-            'genre' => ['required', 'string', 'max:255'],
-            'release_date' => ['required', 'date'],
+            'title' => ['nullable', 'string', 'max:255'],
+            'description' => ['nullable', 'string'],
+            'developer' => ['nullable', 'string', 'max:255'],
+            'publisher' => ['nullable', 'string', 'max:255'],
+            'genre' => ['nullable', 'string', 'max:255'],
+            'release_date' => ['nullable', 'date'],
             'img_url' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,avif', 'max:2048'],
         ];
     }
