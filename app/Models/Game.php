@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Game extends Model
+{
+    protected $fillable = [
+        'title',
+        'description',
+        'developer',
+        'publisher',
+        'genre',
+        'release_date',
+        'img_url'
+    ];
+}
